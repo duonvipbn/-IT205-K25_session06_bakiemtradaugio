@@ -15,21 +15,19 @@ Bai 2:
 
 right_password = "123456"
 lock_count = 0
-while True:
-    if lock_count >= 3:
-        print("Tài khoản đã bị khóa!")
-        break
 
+while lock_count < 3:
     p_password = input("Nhap mat khau: ")
 
     if right_password == p_password:
         print("Đăng nhập thành công!")
         break
-    
     else:
         lock_count += 1
-        print("Mật khẩu sai, vui lòng nhập lại!")
-
+        if lock_count < 3:
+            print("Mật khẩu sai, vui lòng nhập lại!")
+        else:
+            print("Tài khoản đã bị khóa!")
 Bai 3:
 '''
 total_amount = 0
